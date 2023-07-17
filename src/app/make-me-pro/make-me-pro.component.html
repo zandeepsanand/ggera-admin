@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+<div class="container" style="max-width: 1032px;">
+  <div class="page-title">
+    <div class="pt-5">
+      <div class="resultsTable2" >
+        <h1 class="title text-light pt-3 " style="color: #F15232 !important;font-size: 3rem !important;">My Profile</h1>
+      </div>
+    </div>   
+    <div class=" pt-5 d-flex justify-content-center">
+
+
+  <div class=" resultsTable pb-2 pt-2">
+    <div class=" col-xl-12 p-3">
+        <div class="row">
+            <div class="div col-xl-6 " data-bs-theme="dark">
+                <div class="pt-4 pb-2">
+                    <div class="img-table pb-3">
+                      <img src="../../assets/svg/Ellipse 73.png" alt="" class="image1">
+                      <form [formGroup]="myForm">
+                        <div class="d-flex justify-content-center">
+                            <div cdkDropList (cdkDropListDropped)="onImageDropped($event)">
+                                
+                                <label class="drop-zone text-light pb-4 pt-4">
+                                    <div class="d-flex justify-content-center fa-2x pb-2">
+                                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                                    </div>
+                                   
+                                    <input type="file" accept="image/*" [hidden]="true" (change)="onFileSelected($event)" />
+                                    Drag & drop Image here
+                                  </label>
+                              </div>
+                        </div>
+                       
+                      </form>
+                    </div>
+                  </div>
+                
+               
+                <label for="exampleFormControlInput1" class="form-label text-light pt-4 px-1">Gamer Tag*</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Region</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Win Ratio</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Wins</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Twitch ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Twitter ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+              
+            </div>
+              <div class="div col-xl-6" data-bs-theme="dark">
+                <label for="exampleFormControlInput1" class="form-label text-light px-1">Email</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Username</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Activation ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Platform*</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">KD</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Kills</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Insta ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Discord ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+            
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-12 p-2">
+        <div class="d-flex justify-content-end">
+            <div class="px-1">
+                <div class="btn btn-orange">Make me PRO <span class="pt-0" ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 20" fill="none">
+                    <g clip-path="url(#clip0_523_1085)">
+                      <path d="M20.625 17.5H4.375C4.03125 17.5 3.75 17.7812 3.75 18.125V19.375C3.75 19.7188 4.03125 20 4.375 20H20.625C20.9688 20 21.25 19.7188 21.25 19.375V18.125C21.25 17.7812 20.9688 17.5 20.625 17.5ZM23.125 5C22.0898 5 21.25 5.83984 21.25 6.875C21.25 7.15234 21.3125 7.41016 21.4219 7.64844L18.5938 9.34375C17.9922 9.70312 17.2148 9.5 16.8672 8.89062L13.6836 3.32031C14.1016 2.97656 14.375 2.46094 14.375 1.875C14.375 0.839844 13.5352 0 12.5 0C11.4648 0 10.625 0.839844 10.625 1.875C10.625 2.46094 10.8984 2.97656 11.3164 3.32031L8.13281 8.89062C7.78516 9.5 7.00391 9.70312 6.40625 9.34375L3.58203 7.64844C3.6875 7.41406 3.75391 7.15234 3.75391 6.875C3.75391 5.83984 2.91406 5 1.87891 5C0.84375 5 0 5.83984 0 6.875C0 7.91016 0.839844 8.75 1.875 8.75C1.97656 8.75 2.07812 8.73438 2.17578 8.71875L5 16.25H20L22.8242 8.71875C22.9219 8.73438 23.0234 8.75 23.125 8.75C24.1602 8.75 25 7.91016 25 6.875C25 5.83984 24.1602 5 23.125 5Z" fill="white"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_523_1085">
+                        <rect width="25" height="20" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg></span></div></div>
+<div class="px-1">
+    <div class="btn btn-transparent">Cancel</div></div>
+<div class="px-1">
+                <div class="btn btn-white ">Submit</div>
+                </div>
+         
+            
+        </div>
+    </div>
+   
+</div>
+                
+            </div>
+        </div>
+      
+   
+    </div>
+ <div class="pt-3">
+  <app-footer></app-footer>
+ </div>

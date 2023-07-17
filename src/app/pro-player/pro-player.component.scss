@@ -1,0 +1,71 @@
+
+
+@media screen and (min-width: 1336px) {
+  /* Adjust padding for screen size 1236px and above */
+  .custom-container {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+// @media screen and (min-width: 1050px) {
+//   /* Adjust padding for screen size 1050px and above */
+//   .custom-container {
+//     padding-left: 10%;
+//     padding-right: 10%;
+//   }
+// }
+  @media screen and (min-width: 465px) {
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      // margin-bottom: 20px;
+    }
+  }
+  .box{
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 2%;
+  }
+  .form-select{
+    background-color: #333;
+    background-image: url("../../assets/svg/arrow.svg");
+  }
+  // .profile{
+  //   background-color: #333;
+  // }
+  .profile {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    // margin-bottom: 20px;
+  }
+  .button-container1 {
+    display: flex;
+    justify-content: end;
+    // margin-bottom: 20px;
+  }
+  .red{
+    color: #F15232;
+  }
+  .btn-primary{
+    background-color: #4E4E4E !important;
+    border-color: #4E4E4E !important;
+  }
+  .btn-orange{
+    background-color: #F15232 !important;
+    border-color: #F15232!important;
+  }
+  .form-check-input {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+  .form-check-input:checked {
+    background-color: #333 !important;
+    border-color: #F15232!important;
+}
+ 

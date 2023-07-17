@@ -1,0 +1,23 @@
+.resultsTable {
+    border-radius: 10px !important;
+    border-width: 5px !important;
+    width: 100%;  /*Tested and working as expected: */
+    padding-top: 1%;
+    margin: 0px auto;
+    float: none;
+    background-color: #333;
+}
+.container{
+    min-height: 85%;
+}
+.text1{
+    position: absolute !important;
+    
+     padding: 2%;
+     top: 15%;
+     color: aliceblue;
+}
+.box{
+    min-height: 35vh;
+
+}

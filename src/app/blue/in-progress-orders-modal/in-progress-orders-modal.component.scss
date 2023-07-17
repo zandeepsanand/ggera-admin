@@ -1,0 +1,76 @@
+.mat-dialog-title {
+    position: relative;
+  }
+  .close-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .close-icon {
+    cursor: pointer;
+    width: 20px !important;
+    height: 20px;
+  }
+  
+  
+  
+  
+  
+
+  .heading-size{
+    font-size: 3rem;
+    color: #2196F3 !important;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #4E4E4E !important;
+    color: aliceblue;
+ }
+ .table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
+    background-color:  #2196F3 !important;
+    color: aliceblue;
+ } 
+// testing 
+.table>:not(caption)>*>* { 
+    background-color: #2196F3 !important;
+    color: aliceblue;
+    border-bottom-color: transparent;
+    padding: 15px;
+    vertical-align: middle;
+}
+.table-border{
+border-radius: 10px !important;
+}
+.mdc-dialog .mdc-dialog__content {
+   padding: 50px 24px 20px 24px !important;
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: transparent !important;
+}
+mat-dialog-content{
+  background-color: transparent !important;
+}
+.mat-dialog-container {
+  background-color: transparent;
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+background-color: #000 !important;
+
+}
+.resultsTable {
+  border-radius: 10px !important;
+  border-width: 5px !important;
+  // border-style: solid !important;
+  // border-color: rgba(0, 128, 255, 0.9) !important;
+  width: 100%;  /*Tested and working as expected: */
+  padding-top: 1%;
+  margin: 0px auto;
+  float: none;
+  background-color: #2196F3;
+}
+.resultsTable{
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+}
+

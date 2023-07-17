@@ -1,0 +1,202 @@
+<nav
+  class="navbar navbar-expand-lg  bg-transparent text-light p-2 pt-3" style="border-bottom: 1px solid #333333;"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand " href="#" style="padding-right: 3%;">
+      <img
+              src="../../assets/img/era.png"
+              width="50"
+              height="50"
+          />
+    </a>
+    <button
+      class="navbar-toggler navbar-toggler navbar-dark"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 " style="padding-left: 1%;">
+        <li class="nav-item text-light">
+          <a class="nav-link active text-light" aria-current="page" href="#"
+            > Premade Parties</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-light"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Request
+          </a>
+          <ul class="dropdown-menu text-light">
+            <li><a class="dropdown-item" href="#">Availble</a></li>
+            <li
+              style="
+                width: 90%;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+              "
+            >
+              <hr class="dropdown-divider" style="width: 90%" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">In Progress</a>
+            </li>
+            <li
+              style="
+                width: 90%;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+              "
+            >
+              <hr class="dropdown-divider" style="width: 90%" />
+            </li>
+            <li><a class="dropdown-item" href="#">Completed</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-light"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            My 1-1 Orders
+          </a>
+          <ul class="dropdown-menu text-light">
+            <li><a class="dropdown-item" href="#">In Progress</a></li>
+             <li
+              style="
+                width: 90%;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+              "
+            >
+              <hr class="dropdown-divider" style="width: 90%" />
+            <li><a class="dropdown-item" href="#">Completed</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light disabled">Chat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light disabled">Tournaments</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light disabled">Ranks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light disabled">Referral</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light">Wallet</a>
+          </li>
+        
+
+      </ul>
+    
+      <div class="d-flex">
+
+  
+        <ul class="navbar-nav d-flex mb-2 mb-lg-0">
+            <li class="nav-item p-2 ">
+                <a class="nav-link text-light disabled blue-box blue-box1" style="">
+                    <div class="box" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+                            <path d="M0.416748 0H22.9167V2.5H0.416748V0ZM7.91675 8.75H22.9167V11.25H7.91675V8.75ZM0.416748 17.5H22.9167V20H0.416748V17.5Z" fill="white"/>
+                          </svg>
+                    </div>
+                  
+                </a>
+              </li>
+              <li class="nav-item nav-dark p-2 pt-3" style="position: relative;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                </svg>
+                <span class="notification-badge">3</span>
+              </li>
+                  <li class="nav-item text-light nav-dark p-2" >
+                    <!-- <ng-select [items]="languages" [bindLabel]="'name'" [bindValue]="'code'" >
+                        <ng-template ng-option-tmp let-item="item">
+                          <img [src]="item.image" width="20" height="20" /> {{ item.name }}
+                        </ng-template>
+                      </ng-select> -->
+                      <ng-select [items]="cities" [(ngModel)]="selectedCity" bindLabel="name" bindValue="name" class="form-control custom-ng-select" style="background-color: black !important; color: #ffff;">
+                        <ng-template ng-label-tmp let-item="item">
+                            {{ item.name }}
+                          <img height="15" width="15" [src]="item.avatar"/>
+                          
+                        </ng-template>
+                        <ng-template ng-option-tmp let-item="item" let-search="searchTerm">
+                            <div class="custom-option">
+                                {{ item.name }}
+                              <img height="15" width="15" [src]="item.avatar"/>
+                              
+                            </div>
+                          </ng-template>
+                      </ng-select>
+                      
+                     
+                  
+                    
+                  </li>
+                  <li>
+                    
+                  </li>
+                
+                 
+                
+          
+            <li class="nav-item text-light nav-dark p-2" >
+              <div class="btn btn-blue blue-box" style="border: none !important;">
+                <div class="row ">
+                  <div class="d-flex justify-content-center">
+                    <div class="pr-1 text-light" style="font-size: large;  margin-right: 2%;">
+                      $00000.00
+                    </div>
+                    
+                    
+                  </div>
+    
+                </div>
+                
+               </div>
+            </li>
+            <li class="nav-item pt-1">
+              <img
+              src="../../../assets/svg/Ellipse 73.png"
+              width="45"
+              height="45"
+          class="img-fluid p-2"
+          />
+            </li>
+           
+          </ul>
+
+      </div>
+     
+      <!-- <form class="d-flex" role="search">
+        <input
+          class="form-control me-2 "
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>

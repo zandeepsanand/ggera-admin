@@ -1,0 +1,336 @@
+<div class="about" style="font-family: popins">
+    <app-navbar></app-navbar>
+    <div class="container d-flex justify-content-center">
+      <!-- Content goes here -->
+    </div>
+    <div class="container mt-5">
+      <section
+        class="premade-parties-wrapper"
+     
+      >
+        <div class="container pb-3">
+          <div>
+            <p class="font-weight-bold" style="color: #f15232 ;font-weight: normal;font-size: 2.9em;">Premade Parties</p>
+          </div>
+        </div>
+        <div class="container pb-3">
+          <div
+            style="border: 1px solid #333333; width: 100%; border-radius: 10px;
+            "
+            
+          >
+            <div class="container ">
+              <div class="row p-1" >
+                <div class="col-sm-12 col-lg-8 p-1">
+                  <div class="d-flex ">
+                    <div class="d-flex" style="align-items: 'center'">
+                     
+                      <div class="p-1">
+                        <div
+                          class="streamLobbyItemQueueSlot text-dark m-1"
+                          style="background-color:#ffff"
+                        >
+                          All
+                        </div>
+                      </div>
+                      
+                      <div class="p-1">
+                        <div
+                          class="streamLobbyItemQueueSlot text-light m-1"
+                          style="background-color:#333333"
+                        >
+                          Open slots
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-sm-12 col-lg-4 p-1">
+                  <div class="d-flex justify-content-end">
+                    
+                  
+                        
+                      <div class="search " data-bs-theme="dark">
+                        <i class="fa fa-search" style="color: aliceblue;"></i>
+                        <input type="text" class="form-control" placeholder="Search your chats">
+                   
+                    
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- premade party  -->
+  
+    <div class="container p-1">
+      <div class="p-1">
+        <div
+          class=" "
+          *ngFor="let item of dummydata"
+         
+        >
+          <section class="premade-parties-wrapper">
+            <div id="premade-parties-list" class="premade-parties-list">
+              <div class="streamLobbyItem">
+                <div class="streamLobbyItemVideo">
+                  <div class="streamLobbyItemVideoCover">
+                    <img
+                      *ngIf="!isYouTubeLink(item.party.streamLink)"
+                      class="streamLobbyItemVideoCoverImage "
+                      src="../../assets/svg/bg3.jpg"
+                      alt=""
+                      srcset=""
+                    
+                    />
+                
+                    <ng-container *ngIf="isTwitchLink(item.party.streamLink)">
+                      <!-- Add Twitch video player component here -->
+                    </ng-container>
+  
+                    <ng-container *ngIf="isYouTubeLink(item.party.streamLink)">
+                      <div class="youtube-player-container">
+                        <!-- <youtube-player
+                          [videoId]="extractVideoId(item.party.streamLink)"
+                          [width]="856"
+                          [height]="406"
+                        ></youtube-player> -->
+                      </div>
+                    </ng-container>
+  
+                    <img
+                      (click)="toggleTag()"
+                      *ngIf="!isYouTubeLink(item.party.streamLink)"
+                      class="streamLobbyItemPlayButton"
+                      src="../../../assets/svg/play.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="streamLobbyItemInfoWrapper">
+                  <div class="streamLobbyItemInfoFirstRow">
+                    <div class="streamLobbyItemInfoFirstRowSlotsWrapper"></div>
+                  </div>
+                  <div class="row">
+                    <div class="d-flex justify-content-between">
+                      <div class="p-2">
+                        <p class="streamLobbyItemDescription text-light">
+                          Warzone 2.0
+                          <!-- {{item.party.name}} -->
+                        </p>
+                      </div>
+                      <div class="p-1">
+                        <div
+                          class="streamLobbyItemQueueSlot text-dark m-1"
+                          style="background-color: aliceblue"
+                        >
+                          3 free slots
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="streamLobbyItemSlotsWrapper swiperSlots swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+                  >
+                  <swiper
+                  [slidesPerView]="3"
+                  [navigation]="true"
+                 
+                  [scrollbar]="{ draggable: true }"
+                  [virtual]="true"
+                  [config]="swiperConfig"
+
+                  >
+                    <ng-template swiperSlide *ngFor="let user of item.slots">
+                      <div
+                        *ngIf="user.type == 'PRO'"
+                        class="streamLobbyItemProSlotWrapper swiper-slide"
+                        aria-label="1 / 3"
+                        style="
+                          width: 18rem;
+                          margin-right: 16px;
+                          height: 10px;
+                        "
+                      >
+
+                        <div class="d-flex justify-content-center">
+                          <img
+                            class="card-img-top rounded-circle"
+                            style="
+                              position: absolute;
+                              top: -27px;
+                              left: 120px;
+                              width: 52px;
+                              height: 52px;
+                              background-color: #333333;
+                              padding: 5px;
+                            "
+                            src="{{ user.profileImageUrl }}"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="container">
+                          <div class="d-flex justify-content-center">
+                            <p
+                              class="text-light semi-bold"
+                              style="font-size: 18px"
+                            >
+                              Smo1derTv#6923
+                            </p>
+                            <img
+                              src="../../assets/svg/crown.png"
+                              alt=""
+                              srcset=""
+                              style="
+                                height: 18px;
+                                width: 20px;
+                                margin-left: 5px;
+                                margin-top: 3px;
+                              "
+                            />
+                          </div>
+                          <div class="d-flex-justify-content-start">
+                            <p class="text-light" style="font-size: 12px">
+                              I'm in the top 50 players in the world / Caldera
+                              Trios World...
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="streamLobbySlotTagsWrapper">
+                          <div class="streamLobbySlotTag">
+                            <span class="red-letter">Country</span>
+                            {{ user?.region }}
+                          </div>
+                          <!-- <div class="streamLobbySlotTag">
+                <svg *ngIf="user.platform == 'PS'" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                  fill="white" class="bi bi-playstation" viewBox="0 0 16 16">
+                  <path
+                    d="M15.858 11.451c-.313.395-1.079.676-1.079.676l-5.696 2.046v-1.509l4.192-1.493c.476-.17.549-.412.162-.538-.386-.127-1.085-.09-1.56.08l-2.794.984v-1.566l.161-.054s.807-.286 1.942-.412c1.135-.125 2.525.017 3.616.43 1.23.39 1.368.962 1.056 1.356ZM9.625 8.883v-3.86c0-.453-.083-.87-.508-.988-.326-.105-.528.198-.528.65v9.664l-2.606-.827V2c1.108.206 2.722.692 3.59.985 2.207.757 2.955 1.7 2.955 3.825 0 2.071-1.278 2.856-2.903 2.072Zm-8.424 3.625C-.061 12.15-.271 11.41.304 10.984c.532-.394 1.436-.69 1.436-.69l3.737-1.33v1.515l-2.69.963c-.474.17-.547.411-.161.538.386.126 1.085.09 1.56-.08l1.29-.469v1.356l-.257.043a8.454 8.454 0 0 1-4.018-.323Z" />
+                </svg>
+                <svg *ngIf="user.platform == 'PC'" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                  fill="white" class="bi bi-pc-display" viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V1Zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0ZM9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5ZM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5ZM1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2H1.5Z" />
+                </svg>
+                <svg *ngIf="user.platform == 'XBOX'" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                  fill="white" class="bi bi-xbox" viewBox="0 0 16 16">
+                  <path
+                    d="M7.202 15.967a7.987 7.987 0 0 1-3.552-1.26c-.898-.585-1.120-.826-1.120-1.306 0-.965 1.062-2.656 2.879-4.583C6.459 7.723 7.897 6.44 8.052 6.475c.302.068 2.718 2.423 3.622 3.531 1.43 1.753 2.088 3.189 1.754 3.829-.254.486-1.83 1.437-2.987 1.802-.954.301-2.207.429-3.239.33Zm-5.866-3.57C.589 11.253.212 10.127.03 8.497c-.06-.539-.038-.846.137-1.95.218-1.377 1.002-2.97 1.945-3.95.401-.417.437-.427.926-.263.595.2 1.23.638 2.213 1.528l.574.519-.313.385C4.056 6.553 2.52 9.086 1.94 10.653c-.315.852-.442 1.707-.306 2.063.091.24.007.15-.3-.319Zm13.120.195c.074-.36-.019-1.02-.238-1.687-.473-1.443-2.055-4.128-3.508-5.953l-.457-.575.494-.454c.646-.593 1.095-.948 1.58-1.25.381-.237.927-.448 1.161-.448.145 0 .654.528 1.065 1.104a8.372 8.372 0 0 1 1.343 3.102c.153.728.166 2.286.024 3.012a9.495 9.495 0 0 1-.6 1.893c-.179.393-.624 1.156-.82 1.404-.1.128-.1.127-.043-.148ZM7.335 1.952c-.67-.34-1.704-.705-2.276-.803a4.171 4.171 0 0 0-.759-.043c-.471.024-.45 0 .306-.358A7.778 7.778 0 0 1 6.47.128c.8-.169 2.306-.17 3.094-.005.85.18 1.853.552 2.418.9l.168.103-.385-.02c-.766-.038-1.88.27-3.078.853-.361.176-.676.316-.699.312a12.246 12.246 0 0 1-.654-.319Z" />
+                </svg>
+  
+              </div> -->
+                          <div class="streamLobbySlotTag">
+                            <span class="red-letter">KD</span> 5
+                          </div>
+                          <div class="streamLobbySlotTag">
+                            955 orders
+                            <img
+                              src="../../assets/svg/star.png"
+                              alt=""
+                              srcset=""
+                              style="
+                                height: 18px;
+                                width: 20px;
+                                padding: 2px;
+                                margin-left: 5px;
+                                margin-right: 5px;
+                              "
+                            />
+                            5
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        *ngIf="user.type == 'CLIENT'"
+                        class="streamLobbyItemEmptySlotWrapper swiper-slide"
+                        style="
+                          width: 18rem;
+                          margin-right: 16px;
+                          background-color: #4a4a4a;
+                          color: white;
+                        "
+                      >
+                        <div class="d-flex justify-content-center">
+                          <img
+                            class="card-img-top rounded-circle"
+                            style="
+                              position: absolute;
+                              top: -27px;
+                              left: 120px;
+                              width: 52px;
+                              height: 52px;
+                              background-color: #333333;
+                              padding: 5px;
+                            "
+                            src="../../assets/svg/user.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        Occupied
+                      </div>
+
+                      <div
+                        *ngIf="user.status == 'opened'"
+                        class="streamLobbyItemEmptySlotWrapper swiper-slide"
+                        style="width: 18rem; margin-right: 16px"
+                      >
+                        <div class="d-flex justify-content-center">
+                          <img
+                            class="card-img-top rounded-circle"
+                            style="
+                              position: absolute;
+                              top: -27px;
+                              left: 120px;
+                              width: 52px;
+                              height: 52px;
+                              background-color: #333333;
+                              padding: 5px;
+                            "
+                            src="../../assets/svg/user.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        free slot
+                      </div>
+                    </ng-template>
+
+                    <div class="swiper-button-next" style="z-index: 1000;"></div>
+
+                    <!-- Previous button -->
+                    <div class="swiper-button-prev"></div>
+                  </swiper>
+                  </div>
+  
+                  <div class="streamLobbyItemInfoBottomRow text-light">
+                    <a
+                      (click)="premadeParty(item)"
+                      style="text-decoration: none"
+                      class="streamLobbyItemQueueButtonAdd"
+                    >
+                    
+                      <div class="join-button-wrapper">
+                        <p class="join-button-queue text-light" style="font-size: 1.3rem;">Join party</p>
+                      </div>
+                      <p class="join-button-price text-light">$6 / 30min</p>
+                    </a>
+                  </div>
+                  <p class="autoChargeText"></p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+     </div>
+      <!-- / premade party ends here -->
+    </div>
+  
+    <app-footer></app-footer>
+  </div>
+  

@@ -1,0 +1,95 @@
+<app-navbar></app-navbar>
+<div class="container" style="max-width: 1032px;">
+  <div class="page-title">
+    <div class="pt-5">
+      <div class="resultsTable2" >
+        <h1 class="title text-light pt-3 " style="color: #F15232 !important;font-size: 3rem !important;">My Profile</h1>
+      </div>
+    </div>   
+    <div class=" pt-5 d-flex justify-content-center">
+
+
+  <div class=" resultsTable pb-2 pt-2">
+    <div class=" col-xl-12 p-3">
+        <div class="row">
+            <div class="div col-xl-6 " data-bs-theme="dark">
+                <div class="pt-4 pb-2">
+                    <div class="img-table pb-3">
+                      <img src="../../assets/svg/Ellipse 73.png" alt="" class="image1">
+                      <form [formGroup]="myForm">
+                        <div class="d-flex justify-content-center">
+                            <div cdkDropList (cdkDropListDropped)="onImageDropped($event)">
+                                
+                                <label class="drop-zone text-light pb-4 pt-4">
+                                    <div class="d-flex justify-content-center fa-2x pb-2">
+                                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                                    </div>
+                                   
+                                    <input type="file" accept="image/*" [hidden]="true" (change)="onFileSelected($event)" />
+                                    Drag & drop Image here
+                                  </label>
+                              </div>
+                        </div>
+                       
+                      </form>
+                    </div>
+                  </div>
+                
+               
+                <label for="exampleFormControlInput1" class="form-label text-light pt-4 px-1">Gamer Tag*</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Region</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Win Ratio</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Wins</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Twitch ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Twitter ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+              
+            </div>
+              <div class="div col-xl-6" data-bs-theme="dark">
+                <label for="exampleFormControlInput1" class="form-label text-light px-1">Email</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Username</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Activation ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Platform*</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">KD</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Kills</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Insta ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label text-light px-1 pt-4">Discord ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
+            
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-12 p-2">
+        <div class="d-flex justify-content-end">
+<div class="px-1">
+    <div class="btn btn-transparent">Cancel</div></div>
+<div class="px-1">
+                <div class="btn btn-white ">Submit</div>
+                </div>
+         
+            
+        </div>
+    </div>
+   
+</div>
+                
+            </div>
+        </div>
+      
+   
+    </div>
+ <div class="pt-3">
+  <app-footer></app-footer>
+ </div>

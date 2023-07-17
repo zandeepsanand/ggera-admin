@@ -1,0 +1,123 @@
+.heading-size{
+    font-size: 3rem;
+    color: #F15232 !important;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #4E4E4E !important;
+    color: aliceblue;
+ }
+ .table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
+    background-color:  #333 !important;
+    color: aliceblue;
+ } 
+// testing 
+.table>:not(caption)>*>* { 
+    background-color: #333 !important;
+    color: aliceblue;
+    border-bottom-color: transparent;
+    padding: 15px;
+    vertical-align: middle;
+}
+.table-border{
+border-radius: 10px !important;
+}
+.resultsTable {
+    border-radius: 10px !important;
+    border-width: 5px !important;
+    // border-style: solid !important;
+    // border-color: rgba(0, 128, 255, 0.9) !important;
+    width: 90%;  /*Tested and working as expected: */
+    padding-top: 1%;
+    margin: 0px auto;
+    float: none;
+    background-color: #333;
+  }
+  .resultsTable{
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+  }
+  .scrollable-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .scrollable-container ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+   
+  }
+  
+  .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Apply round shape */
+    border: 1px solid #ccc; /* Add border styles */
+    text-decoration: none;
+    background-color: transparent ;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .page-item.active .page-link {
+    background-color: #F15232;
+    color: #fff;
+    cursor: pointer;
+  }
+  .btn-success{
+    background-color: #F15232 !important;
+    border: none !important;
+  }
+  .btn-warning{
+    background-color: #ffff !important;
+    border: none !important;
+    color: #F15232;
+  }
+
+  .custom-prev-button {
+    /* Custom styles for the previous button */
+    /* Add your desired CSS styles here */
+    border-radius: 50% !important ;
+  }
+  .custom-next-button{
+    border-radius: 50% !important ;
+  }
+  .resultsTable1 {
+    border-radius: 10px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #333 !important;
+    width: 90%;  /*Tested and working as expected: */
+    padding-top: 1%;
+    margin: 0px auto;
+    float: none;
+    background-color: transparent;
+  }
+  .resultsTable2 {
+    border-radius: 10px !important;
+    // border-width: 1px !important;
+    // border-style: solid !important;
+    // border-color: #333 !important;
+    width: 90%;  /*Tested and working as expected: */
+    padding-top: 1%;
+    margin: 0px auto;
+    float: none;
+    background-color: transparent;
+    // color: #F15232 !important;
+  }
+

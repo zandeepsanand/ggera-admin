@@ -1,0 +1,117 @@
+<app-navbar-blue></app-navbar-blue>
+<div class="container" style="max-width: 1032px">
+  <div class="page-title">
+    <div class="pt-5">
+      <div class="resultsTable2">
+        <h1
+          class="title text-light pt-3"
+          style="color: #2196f3 !important; font-size: 3rem !important"
+        >
+          New Premade Party
+        </h1>
+      </div>
+    </div>
+    <div class="pt-5 d-flex justify-content-center">
+      <div class="resultsTable pb-2 pt-2">
+        <div class="col-xl-12 p-3" data-bs-theme="dark">
+          <div class="row">
+            <div class="div col-xl-6" data-bs-theme="dark">
+              <div class="mb-4 row">
+                <label for="name" class="col-sm-6 col-form-label text-light"
+                  >This Premade Party is for</label
+                >
+                <div class="col-sm-6">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Warzone 2.0</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- <label for="exampleFormControlInput1" class="form-label text-light  px-1">Gamer Tag*</label> -->
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Name"
+              />
+            </div>
+            <div class="div col-xl-6" data-bs-theme="dark">
+              <div class="sm-screen">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Tariff per hour"
+                />
+              </div>
+              <label
+                for="exampleFormControlInput1"
+                class="form-label text-light px-1 pt-1"
+              ></label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Streem Link"
+              />
+            </div>
+          </div>
+          <label
+            for="exampleFormControlInput1"
+            class="form-label text-light px-1"
+          ></label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Name"
+          />
+          <label
+            for="exampleFormControlInput1"
+            class="form-label text-light px-1"
+          ></label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Platform</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <label for="exampleFormControlTextarea1" class="form-label"></label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="5"
+            placeholder="Description"
+          ></textarea>
+          <label
+            for="exampleFormControlInput1"
+            class="form-label text-light px-1"
+          ></label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select Another Pro</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-xl-12 p-2">
+          <div class="d-flex justify-content-start">
+            <div class="ps-2" (click)="openDialog()">
+              <div class="btn btn-blue">Create</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pt-3">
+  <app-footer></app-footer>
+</div>
